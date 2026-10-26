@@ -1,0 +1,123 @@
+/* Reset all styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section */
+#portfolio {
+  padding: 80px;
+  background-color: #f8f9fa;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section title */
+#portfolio h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Responsive grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+
+/* Portfolio item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Card hover */
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Project image */
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Image zoom on hover */
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Hidden overlay */
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: white;
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Show overlay on hover */
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+/* Overlay text */
+.portfolio-overlay h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-overlay p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* Links layout */
+.portfolio-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn-portfolio {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  background-color: #0056b3;
+}
+
+/* Small-screen adjustment */
+@media (max-width: 380px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
